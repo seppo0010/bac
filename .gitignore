@@ -1,0 +1,6 @@
+/source/*.csv
+/source/*.xlsx
+/source/*.json
+/source/data
+/*/index.st
+/index/config.toml
