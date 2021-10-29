@@ -3,7 +3,6 @@ import os
 import sys
 
 import toml
-from bs4 import BeautifulSoup
 
 def main():
     d = sys.argv[1]
