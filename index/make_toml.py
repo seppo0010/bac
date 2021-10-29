@@ -17,8 +17,7 @@ def main():
     }
     for f in os.listdir(d):
         with open(os.path.join(d, f)) as fp:
-            soup = BeautifulSoup(fp.read(), 'html.parser')
-        dom = etree.HTML(str(soup))
+            dom = etree.HTML(str(fp.read()))
         title = ''
         if dom is not None:
             titles = dom.xpath('//*[@id="ctl00_CPH1_UCVistaPreviaPliego_usrCabeceraPliego_lblNomPliego"]')

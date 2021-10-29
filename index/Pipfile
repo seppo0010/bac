@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 toml = "*"
-beautifulsoup4 = "*"
 lxml = "*"
 
 [dev-packages]
