@@ -2,5 +2,8 @@
 /source/*.xlsx
 /source/*.json
 /source/data
-/*/index.st
+/*/index*.st
+/*/index*.json
 /index/config.toml
+index_minisearch/node_modules/
+index_minisearch/package-lock.json
