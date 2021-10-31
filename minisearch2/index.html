@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/minisearch@3.1.0/dist/umd/index.min.js"></script>
+<link rel="stylesheet" href="https://files.stork-search.net/basic.css" />
+
+
+<div class="container">
+<input id="searchterm" />
+<div id="results"></div>
+<script>
+let val, mss=[]
+for (let i = 0; i < 5; i++) {
+  fetch('index' + i + '.json')
+    .then((res) => res.text())
+    .then((text) => {
+      mss[i] = MiniSearch.loadJSON(text, {
+        fields: ['html'],
+        storeFields: ['html'],
+      })
+    })
+    .then(() => alert('ready'))
+}
+
+document.getElementById('searchterm').addEventListener('keypress', () => {
+  const newVal = document.getElementById('searchterm').value
+  if (newVal !== val) {
+    val = newVal
+    for (let i = 0; i < 5; i++) {
+      mss[i] && console.log(mss[i].search(newVal))
+    }
+  }
+})
+</script>
